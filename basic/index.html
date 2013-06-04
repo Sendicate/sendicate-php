@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<title>Sendicate : Basic Example</title>
+	
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<!-- This post-handler.js makes use of ajax to send values to subscription.php -->
+	<script src="js/post-handler.js"></script>
+
+</head>
+<body>	
+	<div class="login-form">
+		<form id="sendicate-form-subscription" action="/subscription.php" method="POST" />
+			
+			<input type="text" name="Subscriber[name]" id="subscriber_name" placeholder="your name..." size="40" />
+			<br/>
+			<input type="text" name="Subscriber[email]" id="subscriber_email" placeholder="your email..." size="40" />
+			<br/>
+			<!--
+				Reuse this line to add more fields...
+				<input type="text" name="Subscriber[NEW_FIELD_NAME_FORM]" id="id_of_the_field" placeholder="your placeholder text..." size="40" />
+			-->
+			<button type="submit" id="form_submit">Subscribe</button>
+		</form>
+		<div id="sendicate-response"></div>
+	</div>
+</body>
+</html>
